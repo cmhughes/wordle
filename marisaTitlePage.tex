@@ -1,0 +1,42 @@
+% arara: pdflatex
+\documentclass{article}
+% title page I made for my portfolio for the OU job interview
+\usepackage[showframe=false,a4paper,left=2cm,right=1cm,bottom=1cm]{geometry}
+\usepackage{kpfonts}
+\usepackage{eso-pic}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins}
+
+\tcbset{
+	cmhstyle/.style={
+		enhanced,flushright upper,
+        frame hidden,
+		colback=white,colframe=black!50,
+		%drop fuzzy midday shadow=black!50!yellow
+	}
+}
+%\AddToShipoutPicture{% from package eso-pic: put something to the background
+%	\AtPageCenter{% start the bar at the bottom right of the page
+%		\put(\LenToUnit{.18\paperwidth},-\LenToUnit{.45\paperheight}){% move it to the middle
+%			%\begin{tcolorbox}[pccstyle,left=0mm,top=0mm,bottom=0mm]
+%				\includegraphics[height=22cm]{oulogo}
+%			%\end{tcolorbox}
+%		}%
+%	}%
+%    }
+\pagestyle{empty}
+\begin{document}
+
+\centering\includegraphics[width=\textwidth]{wordle3}
+
+\mbox{}
+\vfill%*{\fill}
+\mbox{}\hfill\scalebox{2}{
+	\begin{tcolorbox}[cmhstyle,width=7.6cm]
+		{\bfseries{Community Team Manager} \par}
+        {Family Intervention and Support Services \par}
+		{\itshape Llanedeyrn Family Support Centre \par}
+		{March 2015}
+	\end{tcolorbox}
+}
+\end{document}
